@@ -1,0 +1,111 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title 企业服务
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    meta(content='yes', name='apple-mobile-web-app-capable')
+    meta(content='black', name='apple-mobile-web-app-status-bar-style')
+    meta(content='telephone=no', name='format-detection')
+    link(rel='shortcut icon', type='image/ico', href='favicon.ico')
+    // inject:css
+    link(rel='stylesheet', href='../css/main.css')
+    // endinject
+    link(rel='stylesheet', href='../css/ui-dialog.css')
+  body
+    include ./includes/head.pug
+    .m-wrap.p-en-ser
+      .hero
+        h2.progress-bar-title.one-fifth
+          | 企业用工指南
+        .container.clearfix
+          .left
+            img(src='../img/compare_others.png', alt='')
+            .compare-box
+              h3.compare-box-title.others
+                | 企业
+                br
+                | 现状
+          .right
+            img(src='../img/compare_tounick.png', alt='')
+            .compare-box
+              h3.compare-box-title.taoli
+                | 淘力
+                br
+                | 平台
+      .section.section-gray.section-zhongbao
+        h2.progress-bar-title.two-fifth
+          | 淘力众包
+        ul.clearfix.benifits-container
+          li.benefit-item.clearfix.first-two
+            .img-container
+              img(src='../img/benefit_quick_hire.png', alt='')
+            .content-container
+              h3.benefit-item-title 快速招聘
+              p.benifit-item-para
+                | 企业发布1-10人招聘需求，淘力通过语音／短信等派单方式，75分钟内筛选和通知符合要求的求职者。
+          li.benefit-item.clearfix.first-two
+            .img-container
+              img(src='../img/benefit_zhongbao.png', alt='')
+            .content-container
+              h3.benefit-item-title 淘力众包
+              p.benifit-item-para
+                | 找团队、找报价、找领队——发布您的重要要求和团队要求，报价、招人、换人、管理，只需要与领队商谈。轻松完成项目
+          li.benefit-item.clearfix
+            .img-container
+              img(src='../img/benefit_study.png', alt='')
+            .content-container
+              h3.benefit-item-title 淘力师徒
+              p.benifit-item-para
+                | 在线课程、培训师、培训机构——帮你培养专业人才，提升员工素质。
+          li.benefit-item.clearfix
+            .img-container
+              img(src='../img/benefit_insure.png', alt='')
+            .content-container
+              h3.benefit-item-title 淘力保障，监管
+              p.benifit-item-para
+                | 承诺书、兼职保险、求职者监管、信息审核。
+      .section.section-white.section-insure
+        h2.progress-bar-title.three-fifth
+          | 保障$监管
+        .insurance-container.clearfix
+          .insurance-item.left
+            img(src='../img/insure_plan.png', alt='')
+            h3 保险方案
+            ul
+              li 兼职，在线购买意外险（1-4类职业）
+              li 保险商城，在线购买和兑换更多保障
+          .insurance-item.right
+            img(src='../img/monitor_plan.png', alt='')
+            h3 监管方案
+            ul
+              li 承诺书、兼职保险、求职监管、信息审核——维护各方用户利益，让您获得更安心的求职、招聘服务体验。
+      .section.section-gray.business-zhongbao
+        h2.progress-bar-title.four-fifth
+          | 企业众包
+        .form-container
+          form.contact-form.form-common(action='/', method='post')
+            input#name(type='text', value='', placeholder='称呼')
+            input#contact(type='text', value='', placeholder='联系方式')
+            textarea#requirement(rows='8', cols='40', placeholder='您的需求')
+            // <button type="submit" name="button">提交</button>
+            input.on-submit(type='button', name='name', value='提交')
+          .barcode-container
+            img(src='../img/wechat_code.png', alt='')
+            p.follow-wechat
+              | 找团队／找报价／找领队
+              br
+              |                 关注微信
+      .section.section-white.business-entry
+        h2.progress-bar-title.full-width
+          | 咨询与合作
+        form.contact-form.form-business(action='/', method='post')
+          textarea(name='name', rows='8', cols='40', placeholder='请留下合作的联系方式，地址等。')
+          // <button type="button" name="button">提交</button>
+          input.on-submit(type='button', name='name', value='提交')
+    include ./includes/footer.pug
+    script(src='../js/libs/artDialog/dialog-min.js')
+    script(src='../js/libs/jquery.placeholder.min.js')
+    script(src='../js/enterprise_service.js')

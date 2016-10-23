@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title 联系淘力
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    meta(content='yes', name='apple-mobile-web-app-capable')
+    meta(content='black', name='apple-mobile-web-app-status-bar-style')
+    meta(content='telephone=no', name='format-detection')
+    link(rel='shortcut icon', type='image/ico', href='favicon.ico')
+    // inject:css
+    link(rel='stylesheet', href='../css/main.css')
+    // endinject
+  body
+    include ./includes/head.pug
+    .m-wrap.p-contact.sidebar
+      .inner-container.clearfix
+        .m-sidebar
+          ul.menu
+            li
+              a(href='/about_taoli.html') 关于淘力
+            li
+              a(href='/statement.html') 免责声明
+            li.on-select
+              a(href='/contact.html') 联系我们
+            li
+              a(href='/media_report.html') 媒体报告
+        .m-content
+          h2 联系我们
+          p
+            strong 联系电话
+            |             4006-464-933
+          p
+            strong 地址
+            |             广州：广州市天河区元岗街道元岗横路310号智汇PARK创意园SOHO 706
+            br
+            |             佛山：佛山市顺德区大良德胜中路新天地俱乐部A202室
+          p
+            strong 邮箱
+            |             问题反馈、商务合作：service@tounick.com
+            br
+            |             企业客户服务：tl_company@tounick.com
+          p.ie-last-child
+            | 如在使用本平台中遇到问题，可加微信号：taoli2180或taoli2177
+    include ./includes/footer.pug

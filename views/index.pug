@@ -1,0 +1,206 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title 淘力首页
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+    meta(content='yes', name='apple-mobile-web-app-capable')
+    meta(content='black', name='apple-mobile-web-app-status-bar-style')
+    meta(content='telephone=no', name='format-detection')
+    link(rel='shortcut icon', type='image/ico', href='favicon.ico')
+    // inject:css
+    link(rel='stylesheet', href='../css/main.css')
+    // endinject
+    link(rel='stylesheet', href='../js/libs/video/video-js.css')
+  body
+    include ./includes/head.pug
+    .m-wrap.p-index
+      .slider-box
+        #slide-window.slider-viewport
+          ul.slides-con.slides-container
+            li.slide.slides.slide1.alive(style='background-image:url(../img/index_banner1.png);')
+            li.slide.slides.slide2(style='background-image:url(../img/index_banner1.png);')
+            li.slide.slides.slide3(style='background-image:url(../img/index_banner1.png);')
+            li.slide.slides.slide4(style='background-image:url(../img/index_banner1.png);')
+        .control-btns
+          a.up.index_left_side_arrow.slider-back(href='#')
+            | UP
+          a.down.index_right_side_arrow.slider-forward(href='#')
+            | DOWN
+      .section.taoli-bw
+        .inner-container.clearfix
+          h2.main-title 淘力愿景
+          .bw-item.connect.animated
+            .title-box
+              .img-container
+                .sprite-connect
+              h2 连接
+              p 沟通蓝领求职者与雇主的招聘工具
+            .detail-box
+              h3 连接功能
+              ul.point-list
+                li.clearfix
+                  strong 免费
+                  p
+                    | 免费领取工作
+                    br
+                    |  11个场景的全职/兼职
+                li.clearfix
+                  strong 快速
+                  p
+                    | 实时派单
+                    br
+                    |  快捷注册，在线认证
+                li.clearfix
+                  strong 简单
+                  p
+                    | 呼叫派单，多种提醒
+                    br
+                    |  帮你锁定工作
+                li.clearfix
+                  strong 专业
+                  p
+                    | 录制视频简历
+                    br
+                    |  高效，专业，免面试
+          .bw-item.monitor.animated
+            .title-box
+              .img-container
+                .sprite-monitor
+              h2 监管
+              p 为雇主与领队解决工作承包和团队管理问题
+            .detail-box
+              h3 监管功能
+              ul.point-list.point-connect.ie-last-child
+                li.zhongbao-des 淘力众包: 为雇主和领队解决团队承包工作的产品。
+                li.highlight
+                  strong 领队
+                  | 通过淘力审核认证之后，领队即可创建团队，承担工作，动态管理团队和工作
+                li.width-icon
+                  i.iconfont.icon-exclamation
+                  | 领队需监督与雇主签署劳动合同，管理团队工作人员，完成雇主约定工作，获得雇主的报酬分发给团队成员。
+          .bw-item.upgrade.animated.ie-last-child
+            .title-box
+              .img-container
+                .sprite-upgrade
+              h2 增值
+              p 联结师徒关系，促进蓝领技能学习、提升
+            .detail-box
+              h3 增值功能
+              ul.point-list
+                li.upgrade-des
+                  | 淘力师徒:
+                  br
+                  |  学习，培训，败师招徒。
+                li.highlight
+                  strong 师傅
+                  | 通过淘力审核认证，发布师父课程，获得学徒  >
+                li.highlight.ie-last-child
+                  strong 徒弟
+                  | 寻找师傅。提交申请。周期测试，获得技能认证  >
+      .section.join
+        .inner-container
+          h2 发现匹配工作，实时推送到您的手机上
+          p
+            | 你想成为新蓝领吗？想要提升自己吗？
+          a.animated.J_showCode 立即加入
+      .section.video-resume
+        .inner-container.clearfix
+          .video-container
+            img(src='../img/index_video_resume_man.png', alt='')
+          .video-intro-box
+            h2 视频简历
+            h3.badge 新蓝领
+            .profile.clearfix
+              .avatar-container
+                img(src='../img/index_video_resume_avatar.png', alt='')
+              .more-information
+                .main-info-box.clearfix
+                  h3.name 李小白
+                  .tag-container
+                    span.tag 标签1
+                    span.tag 标签1
+                    span.tag 标签1
+                p 男·25岁·电子厂普工
+            .description
+              p
+                strong 月收入：
+                | 3千
+                br
+                strong 月支出：
+                | 2.5千
+                br
+                strong 职业规划：
+                | 希望未来可以和工友一起开一个维修店
+                br
+                strong 困难：
+                | 在本地没有人脉，工作枯燥且不长远，加班费少，学不到技能
+                br
+              p
+                strong 加入淘力后：
+                | 利用空闲时间，先通过淘力师徒学技能，平时淘力招聘会派单给我，也可以自己抢单。
+                |                 有经验之后通过淘众包组建团队，申请承包企业订单，时间更自主，收入也变得客观。努力就有回报!
+      .section.immigrate
+        .inner-container
+          h2 淘力澳洲技能移民
+          a(href='#') 立即加入
+      .section.corperation
+        .inner-container
+          h2 合作机构
+          .major
+            ul.clearfix
+              li.logo.nature-furniture corpora
+              li.logo.media-logo idea
+              li.logo.shunde-commercial.ie-last-child 凤凰咨询
+          .others
+            ul.clearfix
+              li.logo.shunde-youth
+              li.logo.shunde-tech
+              li.logo.van-ward-logo.ie-last-child
+      .video-popup
+        .pop-up-layer
+        .video-play-box
+          //
+            <video src="http://video.cdn.qupai.me/tounick/60f7e598-4f22-4d15-aa1b-34f5f8c06994.mp4?auth_key=1476223744-0-2523-0d16439a0b991eac729409278979b0f9" controls="controls">
+            your browser does not support the video tag
+            </video>
+          video#really-cool-video.video-js.vjs-default-skin.vjs-big-play-centered(controls='', preload='auto', width='600', height='364', data-setup='{"techOrder": ["html5","flash"]}')
+            source(src='http://www.w3schools.com/tags/movie.mp4', type='video/mp4')
+            source(src='http://www.w3schools.com/tags/movie.ogg', type='video/webm')
+            //
+              <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a web browser
+              that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+              </p>
+      .J_code.m-dialog
+        .m-dialog-mark
+        .index-code
+          p 招聘、求职—关注淘力 快速、简单、真实！
+          img(src='../img/qrcode.jpg', alt='')
+          span.J_closeCode 知道了
+    .m-dialog.J_markRead(style='z-index:99;')
+      .m-dialog-mark(style='opacity:.8;')
+      .m-read
+        | 在电脑浏览体验更加哦！！
+    include ./includes/footer.pug
+    script(src='../js/jquery_slider.js')
+    script(src='../js/index.js')
+    // <link href="//vjs.zencdn.net/5.8/video-js.min.css" rel="stylesheet">
+    // <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    // <script src="//vjs.zencdn.net/5.8/video.min.js"></script>
+    script(src='../js/libs/video/videojs-ie8.js')
+    script(src='../js/libs/video/video.js')
+    script.
+      $(document).ready(function() {
+      if (common.getUa()) {$('.J_markRead').show()}
+      $('.J_showCode, .J_closeCode').click(function(event){
+      event.preventDefault();
+      if (event.target.className.indexOf('J_showCode')>0) {
+      $('.J_code').fadeIn(500)
+      } else {
+      $('.J_code').fadeOut(500)
+      }
+      })
+      });
