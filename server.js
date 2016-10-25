@@ -83,7 +83,43 @@ app.get('/master_list.html', function(req, res, next){
 })
 
 app.get('/find', function(req, res, next){
-  res.render('find');
+  var totalItems = 80,
+        pageSize = 8,
+        pageCount = 80/8,
+        currentPage = 1,
+        items = [],
+        itemsArrays = [],
+        itemsList = [];
+
+  //genreate list of students
+  for (var i = 1; i < totalItems; i++) {
+      items.push({name: 'Some Item  ' + i});
+  }
+
+  //split list into groups
+  while (items.length > 0) {
+      itemsArrays.push(items.splice(0, pageSize));
+  }
+
+  //set current page if specifed as get variable (eg: /?page=2)
+  if (typeof req.query.page !== 'undefined') {
+      console.log()
+      currentPage = +req.query.page;
+      console.log(itemsArrays)
+      if( currentPage < 1 || currentPage > 10){
+        currentPage = 1;
+      }
+  }
+
+  //show list of students from group
+   itemsList = itemsArrays[+currentPage - 1];
+   res.render('find', {
+       items: itemsList,
+       pageSize: pageSize,
+       totalItems: totalItems,
+       pageCount: pageCount,
+       currentPage: currentPage
+     });
 })
 
 app.get('/find.html', function(req, res, next){

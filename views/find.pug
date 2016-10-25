@@ -25,51 +25,8 @@ html
             span.find-address.J_address(data-address='广东-广州')
               i.iconfont.icon-didian
               | 广州
-          ul.m-find-list.J_find
-            li.find-list-item
-              a(href='find_details')
-                p.item-tit
-                  span.item-tag 兼职
-                  |  工作的标题
-                p.item-info
-                  span
-                    i.iconfont.icon-didian
-                    | 位置
-                  span 公司名称
-                p.item-time 2016-08-06 19：40
-            li.find-list-item
-              a(href='find_details')
-                p.item-tit
-                  span.item-tag 兼职
-                  |  工作的标题
-                p.item-info
-                  span
-                    i.iconfont.icon-didian
-                    | 位置
-                  span 公司名称
-                p.item-time 2016-08-06 19：40
-            li.find-list-item
-              a(href='find_details')
-                p.item-tit
-                  span.item-tag 兼职
-                  |  工作的标题
-                p.item-info
-                  span
-                    i.iconfont.icon-didian
-                    | 位置
-                  span 公司名称
-                p.item-time 2016-08-06 19：40
-            li.find-list-item
-              a(href='find_details')
-                p.item-tit
-                  span.item-tag 兼职
-                  |  工作的标题
-                p.item-info
-                  span
-                    i.iconfont.icon-didian
-                    | 位置
-                  span 公司名称
-                p.item-time 2016-08-06 19：40
+            - for (var i = 0; i < items.length; i++)
+              h1= items[i].name
           include ./includes/page.pug
       .m-dialog.J_dialog
         .m-dialog-mark
